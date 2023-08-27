@@ -29,6 +29,6 @@ install -d "$TARGET_DIR/boot/extlinux/"
 sed -e "$(generic_getty)" \
 	-e "s/%LINUXIMAGE%/$(linux_image)/g" \
 	-e "s/%PARTUUID%/$PARTUUID/g" \
-	"board/orangepi/orangepi-one/extlinux.conf" > "$TARGET_DIR/boot/extlinux/extlinux.conf"
+	"$BR2_EXTERNAL_my_tree_PATH/board/orangepi/orangepi-one/extlinux.conf" > "$TARGET_DIR/boot/extlinux/extlinux.conf"
 
-sed "s/%PARTUUID%/$PARTUUID/g" "board/orangepi/orangepi-one/genimage.cfg" > "$BINARIES_DIR/genimage.cfg"
+sed "s/%PARTUUID%/$PARTUUID/g" "$BR2_EXTERNAL_my_tree_PATH/board/orangepi/orangepi-one/genimage.cfg" > "$BINARIES_DIR/genimage.cfg"
