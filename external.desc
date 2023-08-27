@@ -1,0 +1,4 @@
+name: my_tree
+desc: My simple external-tree for article
+
+> (BR2_EXTERNAL_my_tree_PATH) /board/my_x86_board/users.txt
